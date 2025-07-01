@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="login-body">
+  <main class="login-container">
+    <div class="login-box">
+      <h1>Entrar na Plataforma</h1>
+      <form>
+        <label for="userType">Tipo de Acesso:</label>
+        <select id="userType" name="userType" required>
+          <option value="">Selecione</option>
+          <option value="cliente">Usuário (Cliente)</option>
+          <option value="promotor">Promotor</option>
+          <option value="fornecedor">Fornecedor</option>
+        </select>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p class="cadastro-link">
+        Ainda não tem conta?
+        <a href="cadastro.html">Solicitar Cadastro</a>
+      </p>
+    </div>
+  </main>
+</body>
+</html>

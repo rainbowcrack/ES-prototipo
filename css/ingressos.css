@@ -1,0 +1,48 @@
+.ticket-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.ticket-form label {
+  display: block;
+  margin: 20px 0 8px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.ticket-form input,
+.ticket-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.ticket-form input:focus,
+.ticket-form select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.ticket-form button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ticket-form button:hover {
+  background-color: #2d80b3;
+}

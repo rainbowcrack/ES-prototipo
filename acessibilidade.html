@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Acessibilidade</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .acessibilidade-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      line-height: 1.7;
+    }
+
+    .acessibilidade-container h2 {
+      color: #2c3e50;
+      margin-top: 30px;
+    }
+
+    .acessibilidade-container ul {
+      padding-left: 20px;
+    }
+
+    .high-contrast {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .font-buttons {
+      margin-top: 20px;
+    }
+
+    .font-buttons button {
+      margin-right: 10px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: white;
+      cursor: pointer;
+    }
+
+    .font-buttons button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="espacos.html">Espaços</a>
+      <a href="promotores.html">Promotores</a>
+      <a href="fornecedores.html">Fornecedores</a>
+      <a href="patrocinadores.html">Patrocinadores</a>
+      <a href="fluxo.html">Fluxo</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="ingressos.html">Ingressos</a>
+      <a href="financeiro.html">Financeiro</a>
+      <a href="vendas.html">Vendas</a>
+      
+      <a href="relatorios.html">Relatórios</a>
+      <a href="chatbot.html">Chatbot</a>
+      <a href="painel.html">Painel</a>
+      <a href="sac.html">SAC</a>
+      <a href="login.html">Login</a>
+      
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </aside>
+
+  <main class="content" id="main-content">
+    <h1>Acessibilidade</h1>
+
+    <div class="acessibilidade-container">
+      <p>
+        Nosso objetivo é tornar esta plataforma acessível para todos os usuários, incluindo pessoas com deficiência visual, auditiva, motora ou cognitiva. Abaixo estão algumas medidas que adotamos:
+      </p>
+
+      <h2>Recursos implementados:</h2>
+      <ul>
+        <li>Contraste elevado (modo escuro)</li>
+        <li>Botões para aumentar/diminuir o tamanho da fonte</li>
+        <li>Compatibilidade com leitores de tela</li>
+        <li>Uso de textos alternativos em imagens</li>
+        <li>Navegação por teclado (sem uso de mouse)</li>
+      </ul>
+
+      <div class="font-buttons">
+        <strong>Ajustar fonte:</strong><br>
+        <button onclick="alterarFonte(1)">A+</button>
+        <button onclick="alterarFonte(-1)">A-</button>
+        <button onclick="resetarFonte()">Resetar</button>
+      </div>
+
+      <div class="font-buttons" style="margin-top: 15px;">
+        <strong>Modo de contraste:</strong><br>
+        <button onclick="alternarContraste()">Ativar/Desativar Contraste</button>
+      </div>
+
+      <h2>Como você pode ajudar?</h2>
+      <p>
+        Caso encontre algum problema de acessibilidade ou tenha sugestões de melhoria, entre em contato com nosso <a href="sac.html">SAC</a>. Sua colaboração é essencial para melhorar a experiência de todos.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    let tamanhoFonte = 16;
+    let contrasteAtivo = false;
+
+    function alterarFonte(delta) {
+      tamanhoFonte += delta;
+      document.getElementById('main-content').style.fontSize = tamanhoFonte + 'px';
+    }
+
+    function resetarFonte() {
+      tamanhoFonte = 16;
+      document.getElementById('main-content').style.fontSize = '16px';
+    }
+
+    function alternarContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('high-contrast', contrasteAtivo);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fornecedores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fornecedores.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="espacos.html">Espaços</a>
+      <a href="promotores.html">Promotores</a>
+      <a href="fornecedores.html">Fornecedores</a>
+      <a href="patrocinadores.html">Patrocinadores</a>
+      <a href="fluxo.html">Fluxo</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="ingressos.html">Ingressos</a>
+      <a href="financeiro.html">Financeiro</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="redes.html">Redes Sociais</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="chatbot.html">Chatbot</a>
+      <a href="painel.html">Painel</a>
+      <a href="sac.html">SAC</a>
+      <a href="login.html">Login</a>
+      <a href="responsividade.html">Responsividade</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Cadastro de Fornecimento</h1>
+    <form class="fornecedor-form">
+      <!-- Evento -->
+      <fieldset>
+        <legend>Evento Destinado</legend>
+        <label for="evento">Selecionar Evento:</label>
+        <select id="evento">
+          <option>Festival de Música - São Paulo</option>
+          <option>Congresso de Tecnologia - RJ</option>
+          <option>Teatro Clássico - Curitiba</option>
+        </select>
+      </fieldset>
+
+      <!-- Dados do Fornecedor -->
+      <fieldset>
+        <legend>Informações da Empresa</legend>
+        <label for="empresa">Nome da Empresa:</label>
+        <input type="text" id="empresa" placeholder="Ex: Logística Brasil LTDA">
+
+        <label for="contato">Contato (Email ou Telefone):</label>
+        <input type="text" id="contato" placeholder="Ex: contato@empresa.com">
+      </fieldset>
+
+      <!-- Tipos de Serviço -->
+      <fieldset>
+        <legend>Tipo de Fornecimento</legend>
+        <label><input type="checkbox" name="servico" value="alimentacao"> Alimentação</label><br>
+        <label><input type="checkbox" name="servico" value="transporte"> Transporte</label><br>
+        <label><input type="checkbox" name="servico" value="infraestrutura"> Infraestrutura</label><br>
+        <label><input type="checkbox" name="servico" value="staff"> Staff / Mão de obra</label>
+      </fieldset>
+
+      <!-- Detalhes -->
+      <fieldset>
+        <legend>Detalhes da Capacidade</legend>
+
+        <label for="capacidade">Capacidade de Atendimento (pessoas/unidades):</label>
+        <input type="number" id="capacidade" placeholder="Ex: 500 refeições/dia">
+
+        <label for="logistica">Logística e Requisitos Técnicos:</label>
+        <textarea id="logistica" placeholder="Ex: Necessita acesso exclusivo para caminhões, energia 220v, etc."></textarea>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" placeholder="Outras informações importantes..."></textarea>
+      </fieldset>
+
+      <button type="submit">Registrar Fornecimento</button>
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

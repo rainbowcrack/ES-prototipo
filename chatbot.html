@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="espacos.html">Espaços</a>
+      <a href="promotores.html">Promotores</a>
+      <a href="fornecedores.html">Fornecedores</a>
+      <a href="patrocinadores.html">Patrocinadores</a>
+      <a href="fluxo.html">Fluxo</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="ingressos.html">Ingressos</a>
+      <a href="financeiro.html">Financeiro</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="chatbot.html" class="active">Chatbot</a>
+      <a href="painel.html">Painel</a>
+      <a href="sac.html">SAC</a>
+      <a href="login.html">Login</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Chatbot de Suporte</h1>
+    <p>Converse com nosso assistente virtual e tire dúvidas sobre ingressos, eventos, pagamentos e muito mais!</p>
+
+    <div class="chatbot-container">
+      <div class="chat-window" id="chatWindow">
+        <div class="message bot">Olá! Como posso te ajudar hoje?</div>
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input type="text" id="userInput" placeholder="Digite sua mensagem..." required />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('chatForm');
+    const chatWindow = document.getElementById('chatWindow');
+    const input = document.getElementById('userInput');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userMessage = input.value.trim();
+      if (userMessage === '') return;
+
+      // Adiciona a mensagem do usuário
+      const userMsgDiv = document.createElement('div');
+      userMsgDiv.className = 'message user';
+      userMsgDiv.textContent = userMessage;
+      chatWindow.appendChild(userMsgDiv);
+
+      // Simula resposta do chatbot
+      const botMsgDiv = document.createElement('div');
+      botMsgDiv.className = 'message bot';
+      botMsgDiv.textContent = 'Estamos analisando sua pergunta...';
+      chatWindow.appendChild(botMsgDiv);
+
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+      input.value = '';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vendas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Ajustes específicos para vendas */
+    .content h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: 600;
+      color: #34495e;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    input[type="range"] {
+      flex: 1;
+      -webkit-appearance: none;
+      height: 8px;
+      border-radius: 5px;
+      background: #ddd;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      background: #3498db;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #2980b9;
+      margin-top: -7px;
+      transition: background 0.3s;
+    }
+    input[type="range"]:hover::-webkit-slider-thumb {
+      background: #2980b9;
+    }
+    .price-value {
+      min-width: 80px;
+      font-weight: 700;
+      color: #2980b9;
+      text-align: right;
+    }
+    button {
+      margin-top: 25px;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="espacos.html">Espaços</a>
+      <a href="promotores.html">Promotores</a>
+      <a href="fornecedores.html">Fornecedores</a>
+      <a href="patrocinadores.html">Patrocinadores</a>
+      <a href="fluxo.html">Fluxo</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="ingressos.html">Ingressos</a>
+      <a href="financeiro.html">Financeiro</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="redes.html">Redes Sociais</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="chatbot.html">Chatbot</a>
+      <a href="painel.html">Painel</a>
+      <a href="sac.html">SAC</a>
+      <a href="login.html">Login</a>
+      <a href="responsividade.html">Responsividade</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Gestão de Vendas de Ingressos</h1>
+    
+    <form id="formVendas">
+      <label for="nomeEvento">Nome do Evento:</label>
+      <input type="text" id="nomeEvento" name="nomeEvento" placeholder="Digite o nome do evento" required />
+
+      <label for="descricaoEvento">Descrição do Evento:</label>
+      <textarea id="descricaoEvento" name="descricaoEvento" placeholder="Descreva o evento" required></textarea>
+
+      <label for="precoIngresso">Preço do Ingresso:</label>
+      <div class="slider-container">
+        <input type="range" id="precoIngresso" name="precoIngresso" min="0" max="10000" step="10" value="0" />
+        <div class="price-value" id="valorPreco">R$ 0,00</div>
+      </div>
+
+      <button type="submit">Salvar</button>
+    </form>
+  </main>
+
+  <script>
+    const precoSlider = document.getElementById('precoIngresso');
+    const valorPreco = document.getElementById('valorPreco');
+
+    precoSlider.addEventListener('input', () => {
+      const valor = Number(precoSlider.value);
+      valorPreco.textContent = valor.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      });
+    });
+
+    // Form submission simulation
+    document.getElementById('formVendas').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Dados do evento salvos com sucesso!');
+      // Aqui você pode adicionar lógica para enviar dados para backend
+    });
+  </script>
+</body>
+</html>

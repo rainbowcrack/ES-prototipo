@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Promotores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/promotores.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="espacos.html">Espaços</a>
+      <a href="promotores.html">Promotores</a>
+      <a href="fornecedores.html">Fornecedores</a>
+      <a href="patrocinadores.html">Patrocinadores</a>
+      <a href="fluxo.html">Fluxo</a>
+      <a href="tarefas.html">Tarefas</a>
+      <a href="ingressos.html">Ingressos</a>
+      <a href="financeiro.html">Financeiro</a>
+      <a href="vendas.html">Vendas</a>
+      <a href="redes.html">Redes Sociais</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="chatbot.html">Chatbot</a>
+      <a href="painel.html">Painel</a>
+      <a href="sac.html">SAC</a>
+      <a href="login.html">Login</a>
+      <a href="responsividade.html">Responsividade</a>
+      <a href="acessibilidade.html">Acessibilidade</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Cadastro de Evento</h1>
+    <form class="evento-form">
+      <!-- Dados do Evento -->
+      <fieldset>
+        <legend>Informações do Evento</legend>
+
+        <label for="nome-evento">Nome do Evento:</label>
+        <input type="text" id="nome-evento" placeholder="Digite o nome do evento">
+
+        <label for="data-evento">Data:</label>
+        <input type="date" id="data-evento">
+
+        <label for="descricao-evento">Descrição:</label>
+        <textarea id="descricao-evento" placeholder="Descreva o evento"></textarea>
+      </fieldset>
+
+      <!-- Local e Gerente -->
+      <fieldset>
+        <legend>Local e Gerente</legend>
+
+        <label for="local">Nome do Local:</label>
+        <input type="text" id="local" placeholder="Ex: Centro de Convenções RJ">
+
+        <label for="gerente">Gerente Local:</label>
+        <input type="text" id="gerente" placeholder="Nome completo do gerente">
+      </fieldset>
+
+      <!-- Informações de Pedido -->
+      <fieldset>
+        <legend>Informações Operacionais</legend>
+
+        <label for="alimentacao">Necessidades de Alimentação:</label>
+        <textarea id="alimentacao" placeholder="Ex: Coffee break, food trucks, catering..."></textarea>
+
+        <label for="tamanhos">Infraestrutura (Palco, Telão, Stands):</label>
+        <textarea id="tamanhos" placeholder="Ex: Palco 6x4m, 3 telões, 12 stands..."></textarea>
+
+        <label for="capacidade">Capacidade Total (pessoas):</label>
+        <input type="number" id="capacidade" placeholder="Ex: 800">
+      </fieldset>
+
+      <button type="submit">Salvar Evento</button>
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
